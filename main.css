@@ -1,0 +1,25 @@
+body {
+    font-family: sans-serif;
+}
+
+.header{
+    font-size: 3em;
+    text-align: center;
+}
+
+.pokemon-card{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.pokemon-card > img {
+    height: 300px;
+    width: 300px;
+}
+
+.pokemon-card:hover{
+    transform: scale(1.05);
+    transition: transform 0.5s;
+    border: 2px solid dodgerblue;
+}
