@@ -62,10 +62,18 @@ h3{
 #roster{
     display: flex;
     justify-content: center;
+    gap: 1%;
 }
 
 div[id^="pokemon-"]{
     height: 100px;
     width: 100px;
     border: 1px solid #ccc;
+}
+
+.roster-img{
+    height: 80px;
+    width: 80px;
+    margin: 0 auto;
+    display: block;
 }
