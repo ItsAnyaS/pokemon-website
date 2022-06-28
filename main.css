@@ -13,12 +13,19 @@ body {
     border-radius: 10px;
     background-color: #fff;
     margin-bottom: 1%;
+    position: relative;
+}
+
+.pokemon-card-flash{
+        animation: flash 5s;
 }
 
 .pokemon-card > img {
     height: 350px;
     width: 350px;
 }
+
+
 
 .pokemon-card:hover{
     transform: scale(1.05);
@@ -77,3 +84,4 @@ div[id^="pokemon-"]{
     margin: 0 auto;
     display: block;
 }
+
