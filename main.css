@@ -12,6 +12,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #fff;
+    margin-bottom: 1%;
 }
 
 .pokemon-card > img {
@@ -28,8 +29,9 @@ body {
 
 #container{
     display: flex;
-    justify-content: center;
+    margin: 0 10rem;
     gap: 1%;
+
  
 }
 .btn-container{
@@ -48,6 +50,22 @@ body {
     color: #fff;
 }
 
+#new-pokemon-btn:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
 h3{
     margin: 1rem;
+}
+
+#roster{
+    display: flex;
+    justify-content: center;
+}
+
+div[id^="pokemon-"]{
+    height: 100px;
+    width: 100px;
+    border: 1px solid #ccc;
 }
