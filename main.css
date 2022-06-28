@@ -3,6 +3,7 @@ body {
 }
 
 .header{
+    margin-top: 1rem;
     font-size: 3em;
     text-align: center;
 }
@@ -14,8 +15,8 @@ body {
 }
 
 .pokemon-card > img {
-    height: 420px;
-    width: 420px;
+    height: 350px;
+    width: 350px;
 }
 
 .pokemon-card:hover{
@@ -30,4 +31,23 @@ body {
     justify-content: center;
     gap: 1%;
  
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+#new-pokemon-btn{
+    height: 40px;
+    width: 110px;
+    background-color: #1B9CFC;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+}
+
+h3{
+    margin: 1rem;
 }

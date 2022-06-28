@@ -1,4 +1,9 @@
 const containerDiv = document.querySelector('#container')
+const newBtn = document.querySelector('#new-pokemon-btn')
+newBtn.addEventListener('click', () => {
+   let num = prompt('Enter a Pokemon number')
+   console.log('Number netered', num)
+})
 
 const pokemon = [
     {name: 'Bulbasaur', id:'001'},
@@ -20,7 +25,18 @@ pokemon.map((element, index)  => {
     console.log(element)
     let img = document.createElement('img')
     img.src = imgUrl
-    div.append(img, h3)
+        let audioUrl = `https://play.pokemonshowdown.com/audio/cries/${element.name.toLowerCase()}.mp3`
+        let audio = document.createElement('audio')
+        let source =  document.createElement('source')
+        source.setAttribute('src', audioUrl)
+        source.setAttribute('type', 'audio/mpeg')
+        audio.append(source)
+        div.addEventListener('click', () => {
+        audio.play()
+    })
+    div.append(img, h3, audio)
     containerDiv.append(div)
 })
+
+
 
