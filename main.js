@@ -2,10 +2,28 @@ const containerDiv = document.querySelector('#container')
 const newBtn = document.querySelector('#new-pokemon-btn')
 const rosterDiv = document.querySelector('#roster')
 
+function toFormatAssets(num){
+    if (num.length < 2){
+        return newNum = `00${num}`
+    } else if (num.length == 2){
+        return `0${num}`
+ } else {
+    return num
+ }
+}
+const toFormatApi = (num) => {
+if (num.length == 3 && num[0] != 0){
+        return num
+    } else if (num.length == 3 && num[0] == 0 && num[1] != 0){
+        return `${num[1]}${num[2]}`
+    } else if (num.length == 3 && num[0] == 0 && num[1] == 0){
+        return `${num[2]}`
+    } else {return num}
+}
 newBtn.addEventListener('click', async() => {
    let num = prompt('Enter a Pokemon number')
-   let imgUrl = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${num}.png`
-   let dataUrl = `https://pokeapi.co/api/v2/pokemon/${num}`
+   let imgUrl = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${toFormatAssets(num)}.png`
+   let dataUrl = `https://pokeapi.co/api/v2/pokemon/${toFormatApi(num)}`
    let req = await fetch(dataUrl)
    let res = await req.json()
    let name = res.forms[0].name
@@ -81,13 +99,3 @@ pokemon.map((element, index)  => {
 
 
 
-/*
-function toFormat(num){
-    if (num.length < 2){
-        return newNum = `00${num}`
-    } else if (num.length == 2){{
-        return `0${num}`}
-    }else {
-        return num
-    }
-}*/
