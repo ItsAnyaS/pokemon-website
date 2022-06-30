@@ -36,11 +36,21 @@ body {
 
 #container{
     display: flex;
+    justify-content: center;
     margin: 0 10rem;
     gap: 1%;
 
  
 }
+@media (max-width: 1200px) {
+    .pokemon-card > img{
+        height: auto;
+        width: auto;
+        max-width: 250px;
+        min-width: 250px;
+    }
+}
+
 .btn-container{
     display: flex;
     justify-content: center;
@@ -85,3 +95,18 @@ div[id^="pokemon-"]{
     display: block;
 }
 
+.edit-btn{
+position: relative;
+top: -100px;
+right: -80px;
+height: 20px;
+width: 20px;
+border: none;
+background-color: transparent;
+}
+
+div[id^="pokemon-"] > h3 {
+margin: 0 10px;
+font-weight: 300;
+font-size: 17px;
+}
